@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: loki
-  name: loki-deployment
+  name: loki
   namespace: default
 spec:
   selector:
