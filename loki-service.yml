@@ -7,10 +7,14 @@ metadata:
   namespace: default
 spec:
   ports:
-  - nodePort: 30523
+  - name: http
     port: 3100
     protocol: TCP
     targetPort: 3100
+  - name: grpc
+    port: 9096
+    protocol: TCP
+    targetPort: 9096    
   selector:
     app: loki
   type: NodePort
