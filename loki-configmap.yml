@@ -71,6 +71,6 @@ data:
       enable_api: true
 kind: ConfigMap
 metadata:
-  name: loki-configmap
+  name: loki-config
   namespace: default
 
