@@ -23,9 +23,15 @@ spec:
           protocol: TCP
         volumeMounts:
         - mountPath: /etc/loki/local-config.yaml
-          name: loki-config-volume
+          name: loki-config
           subPath: loki-config.yaml
+        - name: loki-pv
+          mountPath: /loki          
       volumes:
       - configMap:
-          name: loki-configmap
-        name: loki-config-volume
+          name: loki-config
+        name: loki-config
+      - name: loki-pv
+        persistentVolumeClaim:
+          claimName: loki-pvc
+
